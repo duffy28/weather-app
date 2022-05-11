@@ -6,10 +6,13 @@ function formatDate(date) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[now.getDay()];
   let hour = now.getHours();
+  if (hour > 12) {
+    hour -= 12;
+  }
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = "0" + minutes;
