@@ -25,8 +25,8 @@ function cToF() {
   let lows = document.querySelectorAll(".low");
   let unit = document.querySelectorAll(".unit");
   for (let i = 0; i < highs.length; i++) {
-    highs[i].innerHTML = 85;
-    lows[i].innerHTML = 62;
+    highs[i].innerHTML = Math.round(temp);
+    lows[i].innerHTML = Math.round(temp2);
   }
   for (let j = 0; j < unit.length; j++) {
     unit[j].innerHTML = "F";
@@ -36,9 +36,12 @@ function fToC() {
   let highs = document.querySelectorAll(".high");
   let lows = document.querySelectorAll(".low");
   let unit = document.querySelectorAll(".unit");
+  let newTemp, newTemp2;
   for (let i = 0; i < highs.length; i++) {
-    highs[i].innerHTML = 35;
-    lows[i].innerHTML = 18;
+    newTemp = (temp - 32) * (5.0 / 9);
+    newTemp2 = (temp2 - 32) * (5.0 / 9);
+    highs[i].innerHTML = Math.round(newTemp);
+    lows[i].innerHTML = Math.round(newTemp2);
   }
   for (let j = 0; j < unit.length; j++) {
     unit[j].innerHTML = "C";
@@ -85,6 +88,8 @@ function changeTemp(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let icon = document.querySelector(".current-icon");
+  temp = response.data.main.temp_max;
+  temp2 = response.data.main.temp_min;
   highTemp.innerHTML = Math.round(response.data.main.temp_max);
   lowTemp.innerHTML = Math.round(response.data.main.temp_min);
   humidity.innerHTML = Math.round(response.data.main.humidity);
@@ -94,6 +99,9 @@ function changeTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
+let temp = null;
+let temp2 = null;
 
 let cityBox = document.querySelector(".search-form");
 cityBox.addEventListener("submit", userCity);
