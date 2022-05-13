@@ -103,6 +103,8 @@ function changeTemp(response) {
 let temp = null;
 let temp2 = null;
 
+getPosition();
+
 let cityBox = document.querySelector(".search-form");
 cityBox.addEventListener("submit", userCity);
 
