@@ -46,23 +46,20 @@ body {
 
 .icon {
   background-color: #fff;
-  text-align: center;
-  font-size: 30px;
+  display: block;
+  margin: 0 auto;
   width: 10%;
   padding: 10px;
-  margin: 2px auto;
   border: 1px solid rgb(74, 131, 188);
   border-radius: 25px;
 }
 
 .current-icon {
-  font-size: 100px;
-  width: 160px;
-  text-align: center;
   display: block;
   margin: 0 auto;
+  width: 120px;
   position: relative;
-  top: -50px;
+  top: -40px;
 }
 
 .high {
