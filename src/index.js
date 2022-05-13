@@ -84,10 +84,15 @@ function changeTemp(response) {
   let lowTemp = document.querySelector("#low");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
+  let icon = document.querySelector(".current-icon");
   highTemp.innerHTML = Math.round(response.data.main.temp_max);
   lowTemp.innerHTML = Math.round(response.data.main.temp_min);
   humidity.innerHTML = Math.round(response.data.main.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let cityBox = document.querySelector(".search-form");
