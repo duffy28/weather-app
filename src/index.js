@@ -20,33 +20,6 @@ function formatDate(date) {
   let message = `${day} ${hour}:${minutes}`;
   return message;
 }
-function cToF() {
-  let highs = document.querySelectorAll(".high");
-  let lows = document.querySelectorAll(".low");
-  let unit = document.querySelectorAll(".unit");
-  for (let i = 0; i < highs.length; i++) {
-    highs[i].innerHTML = Math.round(temp);
-    lows[i].innerHTML = Math.round(temp2);
-  }
-  for (let j = 0; j < unit.length; j++) {
-    unit[j].innerHTML = "F";
-  }
-}
-function fToC() {
-  let highs = document.querySelectorAll(".high");
-  let lows = document.querySelectorAll(".low");
-  let unit = document.querySelectorAll(".unit");
-  let newTemp, newTemp2;
-  for (let i = 0; i < highs.length; i++) {
-    newTemp = (temp - 32) * (5.0 / 9);
-    newTemp2 = (temp2 - 32) * (5.0 / 9);
-    highs[i].innerHTML = Math.round(newTemp);
-    lows[i].innerHTML = Math.round(newTemp2);
-  }
-  for (let j = 0; j < unit.length; j++) {
-    unit[j].innerHTML = "C";
-  }
-}
 function userCity(event) {
   event.preventDefault();
   let cityBox = document.querySelector(".search-bar");
@@ -153,8 +126,3 @@ geoClicker.addEventListener("click", getPosition);
 let currentTime = document.querySelector("#date-time");
 let now = new Date();
 currentTime.innerHTML = formatDate();
-
-let celClicker = document.querySelector(".c");
-let farClicker = document.querySelector(".f");
-celClicker.addEventListener("click", fToC);
-farClicker.addEventListener("click", cToF);
