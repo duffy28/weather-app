@@ -1,5 +1,0 @@
-Forecast 
-    1. Re-design forecast HTML
-    2. Edit css to decrease complexity (boxes in boxes)
-    3. Add api
-    4. Make new java functions to integreate api

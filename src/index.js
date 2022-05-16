@@ -87,9 +87,9 @@ function displayForecast(response) {
           alt="Cloudy"
         />
         <br />
-        <span class="high">${max}</span>°<span class="unit">F</span>
+        <span class="high forecast-temp">${max}</span>°<span class="unit">F</span>
         <br />
-        <span class="low">${min}</span>°<span class="unit">F</span>
+        <span class="low forecast-temp">${min}</span>°<span class="unit">F</span>
       </div>`;
     }
   });
