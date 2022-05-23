@@ -18,6 +18,7 @@ body {
   border: 3px solid rgb(139, 189, 238);
   border-radius: 10px;
   background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(48, 143, 238, 0.1);
 }
 
 .temp-box {
@@ -35,8 +36,9 @@ body {
   display: block;
   margin: 40px auto;
   border-radius: 20px;
-  background-color: rgb(233, 245, 255);
+  background-color: rgb(210, 235, 255);
   text-align: center;
+  box-shadow: 10px 10px 10px rgba(24, 74, 123, 0.05);
 }
 
 .high {
