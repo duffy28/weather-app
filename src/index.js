@@ -110,7 +110,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-let apiKey = "84c62539d2ae6fa1489aa536b432ef2c";
+let apiKey = "7b9b95b30c94fea1c4bec4ee3672341d";
 
 let temp = null;
 let temp2 = null;
